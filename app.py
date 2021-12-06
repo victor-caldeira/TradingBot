@@ -67,7 +67,7 @@ while True:
      try:
          balance = client.get_asset_balance(asset=config.asset[:3])['free']
          break
-     except ValueError:
+     except TypeError:
          print_to_txt("Error reading balance. Retrying...", 'log.txt')
 
 balance = float(balance) # DELETE WHEN REALLY RUNNING
